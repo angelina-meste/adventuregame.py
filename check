@@ -1,0 +1,64 @@
+#Developer's name: Angelina
+#Date: 11/20/20
+#Adventure Game: The Evil Bruh
+#Background information: This is basically just a continuation to an ongoing story I've been doing for these types of assignments
+
+#variables
+done = False
+note = False
+
+room0 = ("You're back at the start again.")
+room1 = ("Ohh a painting. Very nice. That must be Lady Moment. \nIs that a note behind the frame? Go get it.")
+room2 = ("This is one long, dusty hall full of nothing. Sounds like \nthis is where the noise is coming from though. BANG. There it is \nagain. Go farther. BANG. 'HELP! I HEAR YOU, COME HERE!' Do you \nwanna go farther or turn back? ")
+room3 = ("Alright, go on. BANG. After walking down the hallway, \nyou're met with a wide-eyed, bald man banging against a see-through \ndoor. 'Listen to me... do you... have... the key?'")
+room4 = ("Looks like this door needs a code to open it.")
+note = ("1352")
+
+
+#intro
+print("After a failed attempt to escape the Evil Bruh's maze, \nyou end up in a dark pit. It's up to you to escape and finally \nput a stop to him.")
+
+print()
+
+#beginning --- narrator
+print("So you're in a dark pit, eh? Shame. \nHave you tried feeling around?")
+print()
+
+#first decision
+choice1 = input("Well? Yes or no? ")
+#user input that gives player a flashlight
+
+if choice1.lower() == "yes" or choice1.lower() == "yep" or choice1.lower() == "yeah" or choice1.lower() == "y" or choice1.lower() == "i have":
+  print("Liar. Go on, feel around.")
+  print()
+  print("Oh, look! You found a flashlight while feeling around. Fantastic.\nLook at all the dust down here.")
+  
+else: 
+  print()
+  print("Oh, look! You found a flashlight while feeling around. Fantastic. \nIt's pretty dusty down here.")
+
+print()
+
+#finding the right room choice
+print("So, you can finally see. Look at all these cells. All of em' empty, huh. \nI wonder if there's anyone else down here.")
+
+print()
+print("BANG!")
+print()
+
+choice2 = input("What was that!? Wanna go look? ")
+#user input to search for noise 
+
+if choice2.lower() == "yes" or choice2.lower() == "yep" or choice2.lower() == "yeah" or choice2.lower() == "y":
+  print()
+  choice3 = input("Alright, alright... where should we look first? \na) the old painting \nb) the old, wooden door \nc) the hallway that doesn't seem to have an end. \nd) give up \n")
+  if choice3.lower() == "a" or choice3.lower() == "the old painting" or choice3.lower() == "old painting" or choice3.lower() == "painting":
+    print(room1)
+    note = True
+  elif choice3.lower() == "b" or choice3.lower() == "door":
+    print(room4)
+  elif choice3.lower() == "c" or choice3.lower() == "hall" or choice3.lower() == "hallway": 
+    print(room2)
+  else: 
+    print("Time to sit in a corner and wait.")
+    done = True
